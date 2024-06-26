@@ -802,7 +802,7 @@ a {
     }
     section {
       line-height: 18pt;
-      padding: 100px 0 130px 0;
+      padding: 100px 0 200px 0;
     }
     section .container {
       padding: 0 10px;
@@ -970,7 +970,7 @@ a {
   /* 미디어쿼리 웨이포인트 투명도 */
   @media screen and (min-width: 660px) {
     .waypoint {
-      /* opacity: 0; */
+      opacity: 0;
     }
 }
     .animated.waypoint#gallery {
@@ -1183,3 +1183,13 @@ a {
         transform: scale(1);
       }
     }
+
+    /* 스크롤매직 */
+    #about, #portfolio, #contact {
+      opacity: 0;
+      transition: opacity 1.3s ease-out;
+  }
+  
+  #about.visible, #portfolio.visible, #contact.visible {
+      opacity: 1;
+  }

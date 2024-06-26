@@ -244,3 +244,17 @@ $(function() {
   });
 });
 
+$(document).ready(function () {
+  // Initialize ScrollMagic Controller
+  var controller = new ScrollMagic.Controller();
+
+  // Create scenes for each section
+  ['about', 'portfolio', 'contact'].forEach(function (sectionId) {
+      new ScrollMagic.Scene({
+          triggerElement: '#' + sectionId,
+          triggerHook: 0.9 // Trigger when the section is 90% in view
+      })
+          .setClassToggle('#' + sectionId, 'visible') // Add class to make visible
+          .addTo(controller);
+  });
+});
